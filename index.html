@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+  <a href="https://google.com">google.com</a>
+  <h3></h3>
+
+  <script type="text/javascript">
+    $(function() {
+      var time = 0;
+      var f = function() {
+        time++;
+
+        if (time > 5) {
+          $('a')[0].click();
+          console.log("Doc ready");
+        } else {
+          $('h3').text(5 - time);
+          setTimeout(f, 1000);
+        }
+      }
+
+      setTimeout(f, 1000);
+    });
+  </script>
+
+</body>
+</html>
